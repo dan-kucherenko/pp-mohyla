@@ -3,13 +3,9 @@
 //
 
 int nsdLoop(int firstNum, int secondNum) {
-	while (firstNum != secondNum) {
-		if (firstNum > secondNum)
-			firstNum -= secondNum;
-		else
-			secondNum -= firstNum;
-		return firstNum;
-	}
+	while (firstNum != secondNum)
+		firstNum > secondNum ? firstNum -= secondNum : secondNum -= firstNum;
+	return firstNum;
 }
 
 int nsdReccursive(int firstNum, int secondNum) {

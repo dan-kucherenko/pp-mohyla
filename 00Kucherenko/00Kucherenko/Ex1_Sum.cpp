@@ -2,7 +2,7 @@
 // Developed by Kucherenko Daniil on 9/15/22
 //
 
-double sumFunc(int* ptr_n, int* ptr_x) {
+double sumFunc(const int* ptr_n, const int* ptr_x) {
 	double sum = 0;
 	int n = *ptr_n, x = *ptr_x;
 	long factorial;
