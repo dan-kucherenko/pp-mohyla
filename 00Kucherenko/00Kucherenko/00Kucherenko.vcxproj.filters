@@ -18,12 +18,24 @@
     <ClInclude Include="Ex1_Sum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Ex2_Sin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex3_DivWithRem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex1_Sum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex2_Sin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex3_DivWithRem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

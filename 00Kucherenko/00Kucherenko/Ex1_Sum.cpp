@@ -4,20 +4,21 @@
 
 double sumFunc(int* ptr_n, int* ptr_x) {
 	double sum = 0;
-	int n = *ptr_n, x = *ptr_x, fact_f;
+	int n = *ptr_n, x = *ptr_x;
+	long factorial;
 	for (int k = 0; k <= n; k++) {
-		fact_f = 1;
+		factorial = 1;
 		if (k != 0 && k != 1) {
 			for (int j = 1; j <= k; j++)
-				fact_f *= j;
+				factorial *= j;
 		}
 		if (k == 0)
 			sum = 1;
 		else {
 			if (k % 2 == 0)
-				sum += (double)x / fact_f;
+				sum += (double)x / factorial;
 			else
-				sum += (double)-x / fact_f;
+				sum += (double)-x / factorial;
 			x *= *ptr_x;
 		}
 	}

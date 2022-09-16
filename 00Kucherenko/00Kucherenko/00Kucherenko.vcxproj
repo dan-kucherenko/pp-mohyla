@@ -128,10 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Ex1_Sum.h" />
+    <ClInclude Include="Ex2_Sin.h" />
+    <ClInclude Include="Ex3_DivWithRem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex1_Sum.cpp" />
+    <ClCompile Include="Ex3_DivWithRem.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Ex2_Sin.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
