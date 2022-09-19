@@ -16,7 +16,7 @@ int main(void) {
 	const int ex1_var1 = 5, ex1_var2 = 6;
 	cout << "Result of the 1st ex. (sum) is: " << sumFunc(&ex1_var1, &ex1_var2) << ", n=" << ex1_var1 << ", x=" << ex1_var2 << endl;
 	//Ex2
-	double x = 0.5, e = 0.0001;
+	double x = 0.7, e = 0.007;
 	cout << "Result of the 2nd ex.(sin func) for x=0.7 and e=0.007 is " << sinFunct(&e, &x) << endl;
 	//Ex3
 	const int ex3_var1 = 46, ex3_var2 = 9;
