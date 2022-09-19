@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "Ex1_Sum.h"
+#include "Ex2_Sin.h"
 #include "Ex3_DivWithRem.h"
 #include "Ex4_NSDr.h"
 #include "Ex5_ChebyshevPoly.h"
@@ -14,6 +15,9 @@ int main(void) {
 	//Ex1
 	const int ex1_var1 = 5, ex1_var2 = 6;
 	cout << "Result of the 1st ex. (sum) is: " << sumFunc(&ex1_var1, &ex1_var2) << ", n=" << ex1_var1 << ", x=" << ex1_var2 << endl;
+	//Ex2
+	double x = 0.5, e = 0.0001;
+	cout << "Result of the 2nd ex.(sin func) for x=0.7 and e=0.007 is " << sinFunct(&e, &x) << endl;
 	//Ex3
 	const int ex3_var1 = 46, ex3_var2 = 9;
 	cout << "Result of the 3rd ex. (dividing with remainder) for m=46, n=9 is " << divWithRem(ex3_var1, ex3_var2)
@@ -24,5 +28,7 @@ int main(void) {
 	//Ex5
 	const int ex5_var1 = 4, ex5_var2 = 3;
 	cout << "Result of the 5th ex. (Chebyshev Polynomial) for n=4 and x=3 is: " << chebyshevPolynomial(ex5_var1, ex5_var2) << endl;
+
 	return 0;
+
 }
