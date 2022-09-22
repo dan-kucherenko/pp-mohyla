@@ -2,25 +2,18 @@
 // Developed by Kucherenko Daniil on 9/15/22
 //
 
+/*
+s[0]=1;
+s[1] = -x / k
+s[n] = s[n-1] * -x /k
+*/
+
 double sumFunc(const int* ptr_n, const int* ptr_x) {
-	double sum = 0;
 	int n = *ptr_n, x = *ptr_x;
-	long factorial;
-	for (int k = 0; k <= n; k++) {
-		factorial = 1;
-		if (k != 0 && k != 1) {
-			for (int j = 1; j <= k; j++)
-				factorial *= j;
-		}
-		if (k == 0)
-			sum = 1;
-		else {
-			if (k % 2 == 0)
-				sum += (double)x / factorial;
-			else
-				sum += (double)-x / factorial;
-			x *= *ptr_x;
-		}
+	double s0 = 1, sum = 1;
+	for (int k = 1; k <= n; k++) {
+		s0 *= -x / (double)k;
+		sum += s0;
 	}
 	return sum;
 }
