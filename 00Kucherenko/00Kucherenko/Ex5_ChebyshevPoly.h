@@ -3,4 +3,4 @@
 //
 #pragma once
 
-int chebyshevPolynomial(int n, int x);
+double chebyshevPolynomial(unsigned int n, double x);

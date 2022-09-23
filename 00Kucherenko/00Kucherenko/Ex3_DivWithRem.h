@@ -3,4 +3,4 @@
 //
 #pragma once
 
-int divWithRem(int m, int n);
+int divWithRem(int dividend, int divisor);

@@ -3,4 +3,4 @@
 //
 #pragma once
 
-double sumFunc(const int* ptr_n, const int* ptr_x);
+double sumFunc(const int* ptr_x, const int* ptr_n);

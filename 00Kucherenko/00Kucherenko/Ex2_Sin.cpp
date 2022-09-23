@@ -8,7 +8,7 @@ a[n] = a[n-1] * -x^2/ 2*n(2*n+1)
 */
 #include <math.h>
 
-double sinFunct(double* ptr_x, double* ptr_e) {
+double sinFunct(const double* ptr_x, const double* ptr_e) {
 	double x = *ptr_x, sum = x, e = *ptr_e, a0 = x;
 	for (int n = 1; fabs(a0) >= e; n++) {
 		a0 = -a0 * x * x / (2 * n * (2 * n + 1));

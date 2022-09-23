@@ -1,12 +1,15 @@
 //
 // Developed by Kucherenko Daniil on 9/16/22
 //
-
-int divWithRem(int m, int n) {
-	int wholeNum = 0;
+#include <math.h>
+int divWithRem(int dividend, int divisor) {
+	//int dividend = 0;
 	do {
-		m -= n;
-		wholeNum++;
-	} while (m > n); 
-	return wholeNum;
+		if (dividend >= 0) 
+			dividend -= divisor;
+		else 
+			dividend += divisor;
+	}
+	while (abs(dividend) > divisor);
+	return dividend;
 }

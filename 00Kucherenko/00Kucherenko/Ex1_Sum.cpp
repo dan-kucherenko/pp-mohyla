@@ -8,7 +8,7 @@ s[1] = -x / k
 s[n] = s[n-1] * -x /k
 */
 
-double sumFunc(const int* ptr_n, const int* ptr_x) {
+double sumFunc(const int* ptr_x, const int* ptr_n) {
 	int n = *ptr_n, x = *ptr_x;
 	double s0 = 1, sum = 1;
 	for (int k = 1; k <= n; k++) {

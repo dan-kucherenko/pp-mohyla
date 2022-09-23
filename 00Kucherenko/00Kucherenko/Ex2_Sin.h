@@ -3,4 +3,4 @@
 //
 #pragma once
 
-double sinFunct(double *ptr_e, double *ptr_x);
+double sinFunct(const double* ptr_x, const double* ptr_e);
