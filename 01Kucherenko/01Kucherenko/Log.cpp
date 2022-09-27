@@ -1,10 +1,14 @@
+///
+//Developed by Kucherenko Daniil on 09/26/22
+//
+
 #include <iostream>
 
-double logarithm(double x, int base) {
+double logarithm(double x, const int base) {
 	double log_result = 0, divisor = 1;
 	if (x <= 0)
 		std::cout << "Error in input variables: x is negative or equals to 0" << std::endl;
-	else if ((int)x % (int)base == 0 && x > 1) {
+	else if (static_cast<int>(x) % static_cast<int>(base) == 0 && x > 1) {
 		while (x >= base) {
 			x /= base;
 			log_result++;
