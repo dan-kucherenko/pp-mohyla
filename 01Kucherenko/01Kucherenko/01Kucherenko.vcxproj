@@ -127,14 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Abs.h" />
     <ClInclude Include="Cos.h" />
     <ClInclude Include="Lg.h" />
     <ClInclude Include="Log.h" />
+    <ClInclude Include="Sin.h" />
+    <ClInclude Include="Tan.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Cos.cpp" />
     <ClCompile Include="Lg.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Sin.cpp" />
+    <ClCompile Include="Tan.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

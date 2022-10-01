@@ -6,6 +6,5 @@
 #include "Cos.h"
 
 double tangent(double x, double eps) {
-    double tan_res = sinFunct(&x, &eps) / cosFunct(&x, &eps);
-    return tan_res;
+    return sinFunct(&x, &eps) / cosFunct(&x, &eps);
 }
