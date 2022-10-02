@@ -4,8 +4,9 @@
 
 #include "Abs.h"
 
-double sinFunct(const double* ptr_x, const double* ptr_e) {
-	double x = *ptr_x, sum = x, e = *ptr_e, a0 = x;
+double sin_funct(const double* ptr_x, const double* ptr_e) {
+	const double x = *ptr_x,  e = *ptr_e;
+	double a0 = x, sum = x;
 	for (int n = 1; myAbs(a0) >= e; n++) {
 		a0 = -a0 * x * x / (2 * n * (2 * n + 1));
 		sum += a0;

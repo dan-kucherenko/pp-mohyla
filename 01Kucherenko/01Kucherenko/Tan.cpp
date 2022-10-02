@@ -5,6 +5,6 @@
 #include "Sin.h"
 #include "Cos.h"
 
-double tangent(double x, double eps) {
-    return sinFunct(&x, &eps) / cosFunct(&x, &eps);
+double tangent(const double x, const double eps) {
+    return sin_funct(&x, &eps) / cosFunct(&x, &eps);
 }
