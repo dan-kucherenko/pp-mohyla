@@ -4,7 +4,7 @@
 
 #include "Abs.h"
 
-double cosFunct(const double* ptr_x, const double* ptr_e) {
+double cos_funct(const double* ptr_x, const double* ptr_e) {
 	const  double x = *ptr_x, e = *ptr_e;
 	double sum = 1, a0 = 1;
 	for (int n = 1; myAbs(a0) >= e; n++) {
