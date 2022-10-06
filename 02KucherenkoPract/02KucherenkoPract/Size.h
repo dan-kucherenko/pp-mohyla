@@ -1,5 +1,5 @@
 #pragma once
 template <class T> 
-int size() {
-	return sizeof(T);
+int size(T x) {
+	return sizeof(x);
 }

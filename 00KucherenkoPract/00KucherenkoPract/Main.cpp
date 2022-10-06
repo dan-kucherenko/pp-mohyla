@@ -4,8 +4,8 @@
 using namespace std;
 
 int main(void) {
-	int n = 6;
-	int x = 4;
-	cout << "Result of the polynomial sum for x=4, n=6 is: " << polynomialSum(&x, &n) << endl;
+	const int n = 10;
+	const double x = 2;
+	cout << "Result of the polynomial sum for x=2, n=10 is: " << polynomial_sum(x,n) << endl;
 	return 0;
 }

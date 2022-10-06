@@ -37,7 +37,7 @@ int prec(float base) {
 
 	int i = 0;
 	do {
-		d = d / base;
+		d /= base;
 		x = x0 + d;
 		++i;
 	} while (x > x0);

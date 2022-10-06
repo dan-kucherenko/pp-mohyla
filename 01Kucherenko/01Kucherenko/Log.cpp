@@ -12,7 +12,7 @@ double logarithm(double x, const int base) {
 		std::cout << "Error in input variables: base is negative value or equals to 0" << std::endl;
 	else if (static_cast<int>(x) % static_cast<int>(base) == 0 && x > 1) {
 		while (x >= base) {
-			x /= base;
+			x /= base; 
 			log_result++;
 		}
 		return log_result;

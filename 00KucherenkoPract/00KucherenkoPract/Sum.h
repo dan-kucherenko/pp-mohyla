@@ -1,3 +1,3 @@
 #pragma once
-
-long polynomialSum(const int* ptr_x, const int* ptr_n);
+double sum1(double x, int n);
+double polynomial_sum(const double, const int);

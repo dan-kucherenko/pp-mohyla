@@ -6,25 +6,25 @@
 using namespace std;
 
 int main() {
-	/*	{
+		/* {
 		long l;
 		int i = 0;
 		complex <double> z;
 		complex <float> z1;
-	cout << size(l) << endl;
-		cout << size(i) << endl;
-		cout << size(z) << endl;
-		cout << size(z1) << endl;
-		cout << z << endl;
-		cout << size<long>() << endl;
+	//cout << size(l) << endl;
+		//cout << size(i) << endl;
+		//cout << size(z) << endl;
+		//cout << size(z1) << endl;
+		//cout << z << endl;
+		//cout << size<long>() << endl;
 		return 0;
 	}*/
 	{
 		cout << "max_char " << max_char() << endl;
 		cout << "size_char " << size_char() << endl;
 		cout << numeric_limits<int> ::max() << endl;
-		cout << (int)numeric_limits<char> ::max() << endl;
-		cout << (int)numeric_limits<unsigned char> ::max() << endl;
+		cout << static_cast<int>(numeric_limits<char>::max()) << endl;
+		cout << static_cast<int>(numeric_limits<unsigned char>::max()) << endl;
 		cout << hex << numeric_limits<unsigned int> ::max() << endl;
 		float x = 1;
 		float d = 1e-8f;
@@ -40,8 +40,8 @@ int main() {
 		cout << "float 16:" << prec(16) << endl;
 
 		return 0;
-	}
-	bool b;
+	} 
+	/*bool b;
 	char c;
 	unsigned char cu;
 	signed char csg;
@@ -89,5 +89,5 @@ int main() {
 		<< "\n double = " << sizeof(d)
 		<< "\n long double = " << sizeof(ld)
 		<< endl;
-	return 0;
+	return 0;*/
 }
