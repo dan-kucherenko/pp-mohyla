@@ -19,7 +19,7 @@ double quick_power(double x, int exponent, unsigned int& steps) {
 		}
 		steps++;
 	}
-	while (exponent < 0) {
+	while (exponent < 0) { 
 		if (abs(exponent) % 2) {
 			exponent++;
 			res *= 1 / x;
@@ -29,7 +29,8 @@ double quick_power(double x, int exponent, unsigned int& steps) {
 		}
 		steps++;
 	}
-	assert(res == power(x_helper, exponent_helper, steps_helper));
+	if (exponent > 0)
+		assert(res == power(x_helper, exponent_helper, steps_helper));
 	return res;
 }
 
@@ -41,16 +42,12 @@ double quick_power_recursive_hlpr(double x, int exponent, unsigned int& steps) {
 	if (abs(exponent) % 2) {
 		steps++;
 		if (exponent < 0)
-			return (1/x * quick_power_recursive_hlpr(x, exponent - 1, steps));
-		else
-			return (x * quick_power_recursive_hlpr(x, exponent - 1, steps));
+			return (1/x * quick_power_recursive_hlpr(x, exponent + 1, steps));
+		return (x * quick_power_recursive_hlpr(x, exponent - 1, steps));
 	}
 	steps++;
 	const double temp_res = quick_power_recursive_hlpr(x, exponent / 2, steps);
-	if (exponent < 0)
-		return temp_res * (1 / temp_res);
-	else
-		return temp_res * temp_res;
+	return temp_res * temp_res;
 }
 
 double quick_power_recursive(double x, int exponent, unsigned int& steps) {
