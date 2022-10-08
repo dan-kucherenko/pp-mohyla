@@ -1,18 +1,18 @@
+#include "Power.h"
+
 double power(double x, unsigned int exponent, unsigned int& steps) {
 	double res = 1;
-	steps = 0;
-	if (!x) {
-		steps++;
-		return 0;
-	}
-	if (static_cast<int>(x) == 1) {
+	for (steps = 0; steps < exponent; ++steps)
+		res *= x;
+	return res;
+}
+
+double power_recursive(double x, unsigned int exponent, unsigned int& steps) {
+	if (!exponent) {
 		steps++;
 		return 1;
 	}
-	for (int i = 0; i < exponent; ++i) {
-		res *= x;
-		steps++;
-	}
-	return res;
+	steps++;
+	return (x * power_recursive(x, exponent - 1, steps));
 }
 
