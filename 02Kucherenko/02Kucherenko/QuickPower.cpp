@@ -9,6 +9,10 @@ double quick_power(double x, int exponent, unsigned int& steps) {
 	int exponent_helper = exponent;
 	unsigned int steps_helper = 0;
 	steps = 0;
+	if (!x) {
+		steps++;
+		return 0;
+	}
 	while (exponent > 0) {
 		if (exponent % 2) {
 			exponent--;
@@ -19,7 +23,7 @@ double quick_power(double x, int exponent, unsigned int& steps) {
 		}
 		steps++;
 	}
-	while (exponent < 0) { 
+	while (exponent < 0) {
 		if (abs(exponent) % 2) {
 			exponent++;
 			res *= 1 / x;
@@ -42,7 +46,7 @@ double quick_power_recursive_hlpr(double x, int exponent, unsigned int& steps) {
 	if (abs(exponent) % 2) {
 		steps++;
 		if (exponent < 0)
-			return (1/x * quick_power_recursive_hlpr(x, exponent + 1, steps));
+			return (1 / x * quick_power_recursive_hlpr(x, exponent + 1, steps));
 		return (x * quick_power_recursive_hlpr(x, exponent - 1, steps));
 	}
 	steps++;
@@ -52,6 +56,10 @@ double quick_power_recursive_hlpr(double x, int exponent, unsigned int& steps) {
 
 double quick_power_recursive(double x, int exponent, unsigned int& steps) {
 	steps = 0;
+	if (!x) {
+		steps++;
+		return 0;
+	}
 	return quick_power_recursive_hlpr(x, exponent, steps);
 }
 

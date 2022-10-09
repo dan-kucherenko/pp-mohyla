@@ -2,8 +2,13 @@
 #include <cmath>
 
 double power(double x, int exponent, unsigned int& steps) {
+	steps = 0;
+	if (!x) {
+		steps++;
+		return 0;
+	}
 	double res = 1;
-	for (steps = 0; steps < abs(exponent); ++steps) {
+	for (; steps < abs(exponent); ++steps) {
 		if (exponent < 0)
 			res *= 1 / x;
 		else
@@ -27,6 +32,10 @@ double power_recursive_hlpr(double x, int exponent, unsigned int& steps) {
 
 double power_recursive(double x, int exponent, unsigned int& steps) {
 	steps = 0;
+	if (!x) {
+		steps++;
+		return 0;
+	}
 	return power_recursive_hlpr(x, exponent, steps);
 }
 
