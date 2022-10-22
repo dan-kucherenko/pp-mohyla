@@ -1,7 +1,9 @@
 #include <iostream>
+#include "ArithmGeomAv.h"
 
 using namespace std;
 
 int main(void) {
-	return 0;
+	double a = 3, b = 4;
+	arithm_geom_av(a, b);
 }
