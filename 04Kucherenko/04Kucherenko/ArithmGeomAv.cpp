@@ -2,6 +2,8 @@
 // Developed by Daniil Kucherenko on 22.10.22
 //
 #include "ArithmGeomAv.h"
+
+#include <cassert>
 #include <cmath>
 #include <iostream>
 
@@ -19,16 +21,16 @@
  * b[n] > b[n-1];
  */
 
- double arithm_geom_av(double a, double b) {
- 	double a_prev_val = a, b_prev_val = b;
- 	double geom_av = sqrt(a_prev_val * b_prev_val), arithm_av = a_prev_val + b_prev_val / 2;
- 	while (geom_av < b_prev_val && geom_av > a_prev_val && arithm_av < b_prev_val) {
- 		a_prev_val = geom_av;
- 		b_prev_val = arithm_av;
- 
- 		geom_av = sqrt(a_prev_val * b_prev_val);
- 		arithm_av = (a_prev_val + b_prev_val) / 2;
- 	}
- 	return geom_av;
- }
+double arithm_geom_av(const double a, const double b) {
+	double a_prev_val = a, b_prev_val = b;
+	double geom_av = sqrt(a_prev_val * b_prev_val), arithm_av = a_prev_val + b_prev_val / 2;
+	while (geom_av < arithm_av && geom_av > a_prev_val && arithm_av < b_prev_val) {
+		a_prev_val = geom_av;
+		b_prev_val = arithm_av;
+
+		geom_av = sqrt(a_prev_val * b_prev_val);
+		arithm_av = (a_prev_val + b_prev_val) / 2;
+	}
+	return geom_av;
+}
 
