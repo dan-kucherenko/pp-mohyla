@@ -3,7 +3,6 @@
 //
 #include "ArithmGeomAv.h"
 
-#include <cassert>
 #include <cmath>
 #include <iostream>
 
@@ -22,15 +21,22 @@
  */
 
 double arithm_geom_av(const double a, const double b) {
-	double a_prev_val = a, b_prev_val = b;
-	double geom_av = sqrt(a_prev_val * b_prev_val), arithm_av = a_prev_val + b_prev_val / 2;
-	while (geom_av < arithm_av && geom_av > a_prev_val && arithm_av < b_prev_val) {
-		a_prev_val = geom_av;
-		b_prev_val = arithm_av;
+	try {
+		if (a > b || a < 0 || b < 0)
+			throw std::invalid_argument("Invalid input values of the variables");
+		double a_prev_val = a, b_prev_val = b;
+		double geom_av = sqrt(a_prev_val * b_prev_val), arithm_av = a_prev_val + b_prev_val / 2;
+		while (geom_av < arithm_av && geom_av > a_prev_val && arithm_av < b_prev_val) {
+			a_prev_val = geom_av;
+			b_prev_val = arithm_av;
 
-		geom_av = sqrt(a_prev_val * b_prev_val);
-		arithm_av = (a_prev_val + b_prev_val) / 2;
+			geom_av = sqrt(a_prev_val * b_prev_val);
+			arithm_av = (a_prev_val + b_prev_val) / 2;
+		}
+		return geom_av;
+	} catch (std::invalid_argument& exception) {
+		std::cout << exception.what() << std::endl;
 	}
-	return geom_av;
+	return 0;
 }
 
