@@ -4,6 +4,10 @@
 using namespace std;
 
 int main(void) {
-	double a = 3, b = 4;
-	arithm_geom_av(a, b);
+	double a = 1, b = 2;
+	while (b < 50) {
+		cout << "M(" << a << ", " << b << ") = " << arithm_geom_av(a, b) << endl;
+		a += 1.5;
+		b += 1.7;
+	}
 }
