@@ -39,17 +39,15 @@ double quick_power(double x, int exponent, unsigned int& steps) {
 }
 
 double quick_power_recursive_hlpr(double x, int exponent, unsigned int& steps) {
+	steps++;
 	if (!exponent) {
-		steps++;
 		return 1;
 	}
 	if (abs(exponent) % 2) {
-		steps++;
 		if (exponent < 0)
 			return (1 / x * quick_power_recursive_hlpr(x, exponent + 1, steps));
 		return (x * quick_power_recursive_hlpr(x, exponent - 1, steps));
 	}
-	steps++;
 	const double temp_res = quick_power_recursive_hlpr(x, exponent / 2, steps);
 	return temp_res * temp_res;
 }

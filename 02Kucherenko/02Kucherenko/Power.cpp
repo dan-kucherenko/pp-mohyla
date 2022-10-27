@@ -18,15 +18,13 @@ double power(double x, int exponent, unsigned int& steps) {
 }
 
 double power_recursive_hlpr(double x, int exponent, unsigned int& steps) {
+	steps++;
 	if (!exponent) {
-		steps++;
 		return 1;
 	}
 	if (exponent < 0) {
-		steps++;
 		return (1 / x * power_recursive_hlpr(x, exponent + 1, steps));
 	}
-	steps++;
 	return (x * power_recursive_hlpr(x, exponent - 1, steps));
 }
 
