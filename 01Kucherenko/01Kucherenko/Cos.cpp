@@ -4,8 +4,8 @@
 
 #include "Abs.h"
 
-double cos_funct(const double* ptr_x, const double* ptr_e) {
-	const  double x = *ptr_x, e = *ptr_e;
+double cos_funct(double x, const double e) {
+	x *= (3.142 / 180.0);
 	double sum = 1, a0 = 1;
 	for (int n = 1; myAbs(a0) >= e; n++) {
 		a0 = -a0 * x * x / (2 * n * (2 * n - 1));

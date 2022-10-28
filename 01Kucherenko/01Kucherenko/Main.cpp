@@ -16,9 +16,9 @@ int main(void) {
 	cout << "Logarithm of base " << base << " for x=" << x_log << " is " << logarithm(x_log, base) << endl;
 	cout << "==========================================================" << endl;
 	for (; x <= 100; x++) {
-		cout << "Cos for 0.7 and eps 0.007 is " << cos_funct(&x, &eps) << ", default function result is " << cos(x) << endl;
+		cout << "Cos for 0.7 and eps 0.007 is " << cos_funct(x, eps) << ", default function result is " << cos(x) << endl;
 		cout << "==========================================================" << endl;
-		cout << "Sin for 0.7 and eps 0.007 is " << sin_funct(&x, &eps) << ", default function result is " << sin(x) << endl;
+		cout << "Sin for 0.7 and eps 0.007 is " << sin_funct(x, eps) << ", default function result is " << sin(x) << endl;
 		cout << "==========================================================" << endl;
 		cout << "Tangent for 0.7 and eps 0.007 is " << tangent(x, eps) << ", default function result is " << tan(x) << endl;
 	}
