@@ -1,3 +1,7 @@
+//
+// Developed by Daniil Kucherenko on 28.10.22
+//
+
 #include <cassert>
 #include <cstdlib>
 #include <ctime>

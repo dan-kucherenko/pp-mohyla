@@ -1,3 +1,7 @@
+//
+// Developed by Daniil Kucherenko on 28.10.22
+//
+
 #pragma once
 void fillArray(double* coeff, size_t size);
 double Horner(double* coeff, size_t size, double x);
