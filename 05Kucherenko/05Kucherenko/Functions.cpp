@@ -9,20 +9,20 @@
 void fillArray(double* coeff, size_t size) {
 	srand(time(0));
 	for (int i = 0; i < size; i++)
-		coeff[i] = static_cast<double>(rand()) / RAND_MAX * 10000 - 5000;
+		coeff[i] = static_cast<double>(rand() % 10000 - 5000);
 }
 
 double sum(double* coeff, size_t size, int sign) {
 	double sum = 0;
 	if (sign == -1) {
 		// size % 2 != 0 -> first addition will be with the odd exponent for x. example: 2x^3+3x^2+4x-1= 2*(-1)^3... = -2...
-		bool first_addition_neg = size % 2 == 0;
+		bool first_addition_neg = (size % 2 == 0);
 		for (int i = 0; i < size; i++) {
 			if (first_addition_neg)
 				sum += coeff[i] * sign;
 			else
 				sum += coeff[i];
-			first_addition_neg = !first_addition_neg;
+			first_addition_neg = !first_addition_neg;	
 		}
 	} else {
 		for (int i = 0; i < size; i++)
