@@ -19,7 +19,7 @@ double sum(double* coeff, size_t size, int sign) {
 		bool first_addition_neg = (size % 2 == 0);
 		for (int i = 0; i < size; i++) {
 			if (first_addition_neg)
-				sum += coeff[i] * sign;
+				sum -= coeff[i];
 			else
 				sum += coeff[i];
 			first_addition_neg = !first_addition_neg;	

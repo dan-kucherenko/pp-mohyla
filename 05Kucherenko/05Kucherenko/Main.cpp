@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Functions.h"
+#include "HornerScheme.h"
 
 using namespace std;
 
