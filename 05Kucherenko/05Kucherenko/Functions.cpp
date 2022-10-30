@@ -36,5 +36,6 @@ double Horner(double* coeff, size_t size, double x) {
 	for (int i = 1; i < size; i++)
 		result = result * x + coeff[i];
 	assert(x == 1 || x == -1 ? result == sum(coeff, size, x) : true);
+	assert(x == 0 ? coeff[size] : true); // if x=0, then Horner sum is the last number from coeff array
 	return result;
 }
