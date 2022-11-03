@@ -1,7 +1,7 @@
 //
 //Developed by Daniil Kucherenko on 14/10/2022
 //
-
+#include <iostream>
 #include <cmath>
 #include "Exponent.h"
 #include "QuickPower.h"
@@ -19,10 +19,17 @@
 double exp_fract(const double x, const double eps) {
 	double a = 1, s = a;
 	int k = 1;
-	while (abs(a) > eps) {
-		a *= x / k;
-		s += a;
-		k++;
+	try {
+		if (!(x >= 0 && x < 1))
+			throw std::exception("Exception: x > 1 or x < 0");
+
+		while (abs(a) > eps) {
+			a *= x / k;
+			s += a;
+			k++;
+		}
+	} catch (const std::exception& exception) {
+		std::cout << exception.what() << std::endl;
 	}
 	return s;
 }
@@ -32,7 +39,7 @@ double exp_integer(const int x) {
 	return quick_power(exponent, x);
 }
 
-double own_exponent(double x, const double eps){
+double own_exponent(double x, const double eps) {
 	const bool x_is_neg = x < 0;
 	double res = 1;
 	x = fabs(x);
