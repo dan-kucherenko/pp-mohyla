@@ -1,26 +1,25 @@
+//
+// Developed by Daniil Kucherenko on 05.11.2022
+//
+
 #pragma once
 #include <iostream>
 #include <cassert>
 
 template <class T>
-bool is_arr_same(const T* input_arr, const T* sorted_arr, size_t arr_size) {
-	//input_arr = insertion_sort(input_arr, arr_size);
-	//for (int i = 0; i < arr_size; ++i) {
-	//	if (input_arr[i] != sorted_arr[i])
-	//		return false;
-	//}
-	//return true;
-	for (size_t i = 0; i < arr_size; ++i)
-		if (input_arr[i] == sorted_arr[0]) {
-			bool is_arr_same = true;
-			for (unsigned int j = 1; j < arr_size; ++j)
-				if (input_arr[i + j] != sorted_arr[j]) {
-					is_arr_same = false;
-					break;
-				}
-			return is_arr_same;
+bool is_arr_same(const T* input_arr, const T* sorted_arr, const size_t arr_size) {
+	bool is_arr_same = false;
+	for (size_t i = 0; i < arr_size; ++i) {
+		for (size_t j = 0; j < arr_size; ++j) {
+			if (input_arr[j] == sorted_arr[i]) {
+				is_arr_same = true;
+				break;
+			}
 		}
+	}
+	return is_arr_same;
 }
+
 
 template <class T>
 bool sorted_in_ascending(const T* arr, const size_t arr_size) {
@@ -42,16 +41,18 @@ void print_arr(const T* arr, const size_t arr_size) {
 	std::cout << ')' << std::endl;
 }
 
+
+
 template <class T>
-T* insertion_sort(const T* arr, const size_t arr_size) {
-	T* sorted_arr = new T[arr_size];
-	for (size_t i = 0; i < arr_size; i++)
+T* insertion_sort(const T* arr, const size_t arr_size) { 
+	T* sorted_arr = new T[arr_size]; // create additional array for sorting
+	for (size_t i = 0; i < arr_size; i++) // filling new array with the elements of the given array
 		sorted_arr[i] = arr[i];
 
 	for (size_t i = 1; i < arr_size; ++i) {
-		T key = sorted_arr[i];
+		T key = sorted_arr[i]; // make key the current element of the array
 		size_t j = i - 1;
-		while (j >= 0 && key < sorted_arr[j]) {
+		while (j >= 0 && key < sorted_arr[j]) { // if key value is less then prev. element in array, swap these elements
 			T temp = sorted_arr[j];
 			sorted_arr[j] = sorted_arr[j + 1];
 			sorted_arr[j + 1] = temp;
