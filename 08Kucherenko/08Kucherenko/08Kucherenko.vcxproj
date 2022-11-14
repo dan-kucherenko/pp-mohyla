@@ -127,11 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="FibReccursive.h" />
+    <ClInclude Include="FibRecursive.h" />
     <ClInclude Include="Power.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="FibReccursive.cpp" />
+    <ClCompile Include="FibRecursive.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Power.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -18,7 +18,7 @@
     <ClInclude Include="Power.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FibReccursive.h">
+    <ClInclude Include="FibRecursive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -26,7 +26,10 @@
     <ClCompile Include="Power.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FibReccursive.cpp">
+    <ClCompile Include="FibRecursive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

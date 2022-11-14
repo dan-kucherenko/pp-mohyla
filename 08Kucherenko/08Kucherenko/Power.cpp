@@ -1,6 +1,7 @@
 #include "Power.h"
 
-void zet(double& y, double& x, unsigned int& k) {
+void zet(double& y, double& x, unsigned int& k, unsigned int& steps) {
+	steps++;
 	if (k > 0) {
 		if (k % 2 == 1) {
 			y *= x;
@@ -10,12 +11,12 @@ void zet(double& y, double& x, unsigned int& k) {
 			x *= x;
 			k /= 2;
 		}
-		zet(y, x, k);
+		zet(y, x, k, steps);
 	}
 }
 
-double power(double x, unsigned int n) {
+double power(double x, unsigned int n, unsigned int& steps) {
 	double y = 1;
-	zet(y, x, n);
+	zet(y, x, n, steps);
 	return y;
 }
