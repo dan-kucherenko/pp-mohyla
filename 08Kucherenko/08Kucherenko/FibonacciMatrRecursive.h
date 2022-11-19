@@ -3,4 +3,4 @@
 //
 
 #pragma once
-double power(double x, unsigned int n, unsigned int& steps);
+int fibonacci_matr(int n, unsigned int& steps);

@@ -1,3 +1,7 @@
+//
+// Developed by Daniil Kucherenko on 14.11.22
+//
+
 #include "Power.h"
 
 void zet(double& y, double& x, unsigned int& k, unsigned int& steps) {

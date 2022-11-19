@@ -21,6 +21,15 @@
     <ClInclude Include="FibRecursive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AdditionalStructures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickPower.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FibonacciMatrRecursive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Power.cpp">
@@ -30,6 +39,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickPower.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FibonacciMatrRecursive.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

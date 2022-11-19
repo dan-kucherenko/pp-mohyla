@@ -1,3 +1,7 @@
+//
+// Developed by Daniil Kucherenko on 14.11.22
+//
+
 #include "FibRecursive.h"
 
 void fib(double& f1, double& f2, unsigned int n, unsigned int& steps) {
@@ -12,6 +16,7 @@ void fib(double& f1, double& f2, unsigned int n, unsigned int& steps) {
 
 double Fibonaci(unsigned int n, unsigned int& steps) {
 	double f0 = 0, f1 = 1;
+	steps++;
 	switch (n) {
 	case 0:
 		return f0;

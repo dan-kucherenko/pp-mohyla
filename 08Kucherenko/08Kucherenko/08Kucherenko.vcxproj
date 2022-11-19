@@ -127,13 +127,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AdditionalStructures.h" />
+    <ClInclude Include="FibonacciMatrRecursive.h" />
     <ClInclude Include="FibRecursive.h" />
     <ClInclude Include="Power.h" />
+    <ClInclude Include="QuickPower.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FibonacciMatrRecursive.cpp" />
     <ClCompile Include="FibRecursive.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Power.cpp" />
+    <ClCompile Include="QuickPower.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
