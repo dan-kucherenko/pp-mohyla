@@ -5,7 +5,6 @@
 #include "Power.h"
 
 void zet(double& y, double& x, unsigned int& k, unsigned int& steps) {
-	steps++;
 	if (k > 0) {
 		if (k % 2 == 1) {
 			y *= x;
@@ -15,6 +14,7 @@ void zet(double& y, double& x, unsigned int& k, unsigned int& steps) {
 			x *= x;
 			k /= 2;
 		}
+		steps++;
 		zet(y, x, k, steps);
 	}
 }

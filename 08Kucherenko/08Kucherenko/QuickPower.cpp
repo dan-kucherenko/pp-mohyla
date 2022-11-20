@@ -21,13 +21,17 @@ Vector2 operator*(const Matrix2x2& matrix, const Vector2& vector) {
 }
 
 Matrix2x2 quick_matrix_power(const Matrix2x2& matrix, int exponent, const Matrix2x2& uni, unsigned int& steps) {
-	steps++;
-	if (exponent == 0 || exponent == -1)
+	if (exponent == 0 || exponent == -1) {
+		steps++;
 		return uni;
+	}
 	if (exponent % 2) {
+		steps++;
 		exponent--;
 		return quick_matrix_power(matrix, exponent, matrix * uni, steps);
 	}
-	else
+	else {
+		steps++;
 		return quick_matrix_power(matrix * matrix, exponent / 2, uni, steps);
+	}
 }
