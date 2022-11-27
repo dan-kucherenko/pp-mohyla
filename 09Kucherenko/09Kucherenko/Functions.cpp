@@ -1,3 +1,7 @@
+//
+// Developed by Daniil Kucherenko on 27.11.22
+//
+
 #include "Functions.h"
 #include <iostream>
 
