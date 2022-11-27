@@ -5,7 +5,6 @@
 #include "Functions.h"
 #include <iostream>
 
-
 double my_sin(const double x) {
 	return sin(x) - x;
 }
