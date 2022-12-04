@@ -127,9 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ArithmGeomAv.h" />
+    <ClInclude Include="EllipticIntegral.h" />
     <ClInclude Include="Simpson.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArithmGeomAv.cpp" />
+    <ClCompile Include="EllipticIntegral.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Simpson.cpp" />
   </ItemGroup>

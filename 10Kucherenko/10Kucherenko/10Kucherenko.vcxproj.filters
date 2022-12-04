@@ -18,12 +18,24 @@
     <ClInclude Include="Simpson.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ArithmGeomAv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EllipticIntegral.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Simpson.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArithmGeomAv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EllipticIntegral.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
