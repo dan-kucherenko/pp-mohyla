@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(void) {
-	double a = 5, b = 3;
+	double a = 7, b = 5;
 	for (size_t i = 0; i < 50; i++) {
 		cout << "M(" << a << ", " << b << ") = " << arithm_geom_av(a, b) << endl;
 		a += 1.5;

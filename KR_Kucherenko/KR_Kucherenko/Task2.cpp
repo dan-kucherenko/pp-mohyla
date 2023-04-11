@@ -4,13 +4,15 @@
 
 /* Sn = 1 + x^1^3 + x^2^3 + ... + x^n^3
  * a[n] = x^(n^3);
- * a[n+1] = x^((n+1)^3) = x^(n^3+3n^2+3n+1) = a[n] * x^(3n^2) * x^3n * x;
- * a[n-1] = x^((n-1)^3) = x^(n^3-3n^2+3n-1) = a[n] * x^(3n^2) * x^3n * x;
+ * a[n-1] = x^((n-1)^3) = x^(n^3-3n^2+3n-1) = a[n] * x^(3n^2-3n+1);
  *
  * b[n] = x^(3n^2) = (x*x*x)^(n*n) = 
  * b[n+1]
  * a[n] = a[n-1] * x^3
  */
+
+
+
 #include "Task2.h"
 
 double sum(const double& x, const size_t& n) {

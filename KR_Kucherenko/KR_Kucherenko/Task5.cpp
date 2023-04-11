@@ -1,3 +1,7 @@
+//
+// Developed by Daniil Kucherenko on 06.12.22
+//
+
 #include "Task5.h"
 
 size_t string_size(const char* ps) {

@@ -44,7 +44,7 @@ double own_exponent(double x, const double eps) {
 	double res = 1;
 	x = fabs(x);
 	const int integer_part = static_cast<int>(x);
-	const double fractured_part = x - static_cast<int>(x);
+	const double fractured_part = x - integer_part;
 	if (x == 0.0)
 		return res;
 	res = exp_integer(integer_part) * exp_fract(fractured_part, eps);

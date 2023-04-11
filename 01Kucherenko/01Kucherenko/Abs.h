@@ -4,6 +4,6 @@
 
 #pragma once
 template  <typename T>
-inline T myAbs(T x) {
+T myAbs(T x) {
 	return x < 0 ? x = -x : x = x;
 }

@@ -3,4 +3,4 @@
 //
 
 #pragma once
-double cos_funct(double x, const double e);
+double cos(double x, double e);

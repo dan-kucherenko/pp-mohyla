@@ -3,3 +3,4 @@
 //
 
 #pragma once
+unsigned int swap(const unsigned int& word);
